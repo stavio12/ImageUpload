@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://cdn.dribbble.com/users/492035/screenshots/8986102/media/7de7ac27629bc67982468b4bd277817e.png" type="image/x-icon" />
+
+    <title>Image Uploads</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center mt-5">All Images</h2>
+
+      <div class="row mt-5">
+        <%images.forEach(img=>{ %>
+
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4 text-center">
+          <img src="<%= img.imgUrl %>" alt="..." class="img-fluid img-thumbnail" />
+          <form action="/delete/<%=img.id %>?_method=DELETE" method="POST">
+            <input type="hidden" name="_method" value="DELETE" />
+            <button type="submit" class="btn btn-danger btn-lg mt-2 mb-2">Delete</button>
+          </form>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>

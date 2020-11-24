@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://cdn.dribbble.com/users/492035/screenshots/8986102/media/7de7ac27629bc67982468b4bd277817e.png" type="image/x-icon" />
+
+    <title>Image Uploads</title>
+  </head>
+  <body>
+    <section class="text-center">
+      <div class="container">
+        <h1>Upload Images Here</h1>
+        <form action="/upload-single/image/" method="POST" enctype="multipart/form-data">
+          <div class="col-8 mx-auto mt-5">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Single Upload</label>
+              <div class="custom-file">
+                <input type="file" name="singleimage" class="custom-file-input" id="customFile" />
+                <label class="custom-file-label" for="customFile">Choose Image</label>
+              </div>
+              <button type="submit" class="btn btn-success btn-block mt-2">Upload Image</button>
+            </div>
+          </form>
+        <form action="/upload-multiple/images" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Multiple Upload</label>
+              <div class="custom-file">
+                <input type="file" name="mutlipleimages" class="custom-file-input" id="customFile"  multiple/>
+                <label class="custom-file-label" for="customFile">Choose Image</label>
+              </div>
+              <button type="submit" class="btn btn-danger btn-block mt-2">Upload Multiple Images</button>
+            </div>
+        </form>
+      </div>
+
+      </div>
+    </section>
+  </body>
+</html>
