@@ -107,6 +107,7 @@ router.delete("/delete/:id", (req, res) => {
   picture
     .findOne(searchQuery)
     .then((img) => {
+      //delete the picture from folder and also from dbs
       fs.unlink(dirImage + img.imgUrl, (err) => {
         if (err) return console.log(err);
         picture.deleteOne(searchQuery).then((img) => {

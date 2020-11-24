@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/index.css" />
-    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" href="https://cdn.dribbble.com/users/492035/screenshots/8986102/media/7de7ac27629bc67982468b4bd277817e.png" type="image/x-icon" />
+<%- include ('partials/header') -%>
 
-    <title>Image Uploads</title>
-  </head>
-  <body>
     <section class="text-center">
-      <div class="container">
+      <div class="container mt-5">
         <h1>Upload Images Here</h1>
         <form action="/upload-single/image/" method="POST" enctype="multipart/form-data">
           <div class="col-8 mx-auto mt-5">
@@ -40,5 +28,4 @@
 
       </div>
     </section>
-  </body>
-</html>
+    <%- include ('partials/footer') -%>
